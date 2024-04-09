@@ -29,6 +29,21 @@ resource "google_storage_bucket" "weather-bucket" {
   }
 }
 
+resource "google_storage_bucket" "city-bucket" {
+  name          = var.gcs_bucket_name_city
+  location      = var.location
+  force_destroy = true
+
+  lifecycle_rule {
+    condition {
+      age = 1
+    }
+    action {
+      type = "AbortIncompleteMultipartUpload"
+    }
+  }
+}
+
 # Code to create bucket - END
 
 # Code to create a BigQuery dataset - START
