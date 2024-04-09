@@ -29,6 +29,7 @@ resource "google_storage_bucket" "weather-bucket" {
   }
 }
 
+
 resource "google_storage_bucket" "city-bucket" {
   name          = var.gcs_bucket_name_city
   location      = var.location
