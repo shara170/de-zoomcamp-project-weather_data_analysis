@@ -18,7 +18,7 @@ with
 
 airline_route as (
                     select 
-                        airline_lookup_data.iata_code as iata_code, 
+                        routes_lookup_data.iata_code as iata_code_airline, 
                         airline_lookup_data.airline_name, 
                         routes_lookup_data.source_airport_iata, 
                         routes_lookup_data.destination_airport_iata
@@ -31,7 +31,7 @@ airline_route as (
 ),
   
 airline_aiport_route as (select 
-    airline_route.iata_code as iata_code, 
+    airline_route.iata_code_airline as iata_code_airline, 
     airline_route.airline_name as airline_name, 
     airline_route.source_airport_iata as source_airport_iata, 
     airline_route.destination_airport_iata as destination_airport_iata, 
@@ -43,13 +43,15 @@ inner join
     airport_lookup_data airport_lookup_data
 
 on airline_route.source_airport_iata = airport_lookup_data.iata_code
-)
+),
 
+combined as(
 select 
     forecast_data.id as id,
     forecast_data.location as location,
     forecast_data.time_utc as time_utc,
     forecast_data.time_utc_local as time_utc_local,
+    airline_aiport_route.iata_code_airline as iata_code_airline,
     airline_aiport_route.airline_name as airline_name,
     airline_aiport_route.source_airport_iata as source_airport_iata,
     airline_aiport_route.destination_airport_iata as destination_airport_iata,
@@ -85,8 +87,12 @@ select
     forecast_data.winddirection as winddirection,
     forecast_data.windgust as windgust,
     forecast_data.windspeed as windspeed,
-    CURRENT_TIMESTAMP() as insert_dt_local
+    CURRENT_TIMESTAMP() as insert_dt_local,
+    ROW_NUMBER() OVER (PARTITION BY location, time_utc ORDER BY time_utc) as rn
 
 from forecast_data forecast_data
 left join airline_aiport_route airline_aiport_route
 on forecast_data.location = airline_aiport_route.city
+)
+
+select * from combined where rn = 1
