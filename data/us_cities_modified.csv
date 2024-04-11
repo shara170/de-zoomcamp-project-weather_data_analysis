@@ -1,0 +1,100 @@
+city;state_id;state_name;county_name;lat;lng;population;density;timezone;ranking;id
+Miami;FL;Florida;Miami-Dade;25,7840;-80,2101;6080145;4758,9;America/New_York;1;1840015149
+Tampa;FL;Florida;Hillsborough;27,9945;-82,4447;2861173;1320,9;America/New_York;1;1840015982
+Orlando;FL;Florida;Orange;28,4773;-81,3370;1882705;1070,2;America/New_York;1;1840015099
+Jacksonville;FL;Florida;Duval;30,3322;-81,6749;1288298;491,0;America/New_York;1;1840015031
+Cape Coral;FL;Florida;Lee;26,6443;-81,9957;654405;724,2;America/New_York;2;1840015130
+Palm Bay;FL;Florida;Brevard;27,9631;-80,6593;534348;542,9;America/New_York;2;1840015094
+Port St. Lucie;FL;Florida;St. Lucie;27,2796;-80,3884;462047;681,8;America/New_York;2;1840015119
+Bonita Springs;FL;Florida;Lee;26,3558;-81,7859;449527;542,2;America/New_York;2;1840014227
+Kissimmee;FL;Florida;Osceola;28,3041;-81,4169;431618;1409,2;America/New_York;2;1840015109
+Pensacola;FL;Florida;Escambia;30,4413;-87,1911;398813;917,0;America/Chicago;2;1840015005
+Winter Haven;FL;Florida;Polk;28,0118;-81,7014;293093;596,3;America/New_York;2;1840015970
+Lakeland;FL;Florida;Polk;28,0557;-81,9545;280346;663,9;America/New_York;2;1840015108
+St. Petersburg;FL;Florida;Pinellas;27,7931;-82,6652;259343;1620,2;America/New_York;2;1840015977
+Tallahassee;FL;Florida;Leon;30,4551;-84,2527;258696;751,3;America/New_York;2;1840015913
+Hialeah;FL;Florida;Miami-Dade;25,8696;-80,3045;222996;3989,5;America/New_York;2;1840015157
+Deltona;FL;Florida;Volusia;28,9050;-81,2137;221137;976,3;America/New_York;2;1840015072
+Gainesville;FL;Florida;Alachua;29,6804;-82,3459;220929;860,2;America/New_York;2;1840014022
+Ocala;FL;Florida;Marion;29,1780;-82,1511;186840;518,8;America/New_York;2;1840015067
+Fort Lauderdale;FL;Florida;Broward;26,1412;-80,1464;182673;2039,5;America/New_York;2;1840014236
+Spring Hill;FL;Florida;Hernando;28,4798;-82,5300;178833;753,2;America/New_York;2;1840014105
+Pembroke Pines;FL;Florida;Broward;26,0128;-80,3382;170472;2014,0;America/New_York;2;1840015141
+Panama City;FL;Florida;Bay;30,1995;-85,6003;169810;373,9;America/Chicago;2;1840015034
+Leesburg;FL;Florida;Lake;28,7672;-81,8962;166200;270,6;America/New_York;2;1840015083
+Hollywood;FL;Florida;Broward;26,0293;-80,1679;152764;2164,4;America/New_York;2;1840015144
+Miramar;FL;Florida;Broward;25,9773;-80,3351;135158;1808,6;America/New_York;2;1840015137
+Coral Springs;FL;Florida;Broward;26,2702;-80,2591;133801;2259,4;America/New_York;2;1840015134
+Lehigh Acres;FL;Florida;Lee;26,6120;-81,6388;124440;518,3;America/New_York;2;1840014220
+West Palm Beach;FL;Florida;Palm Beach;26,7469;-80,1320;117588;842,8;America/New_York;2;1840015993
+Clearwater;FL;Florida;Pinellas;27,9790;-82,7623;116984;1727,4;America/New_York;2;1840015110
+Brandon;FL;Florida;Hillsborough;27,9367;-82,3000;114923;1339,2;America/New_York;2;1840014151
+Pompano Beach;FL;Florida;Broward;26,2428;-80,1312;111790;1793,5;America/New_York;2;1840015143
+Miami Gardens;FL;Florida;Miami-Dade;25,9433;-80,2426;111618;2332,6;America/New_York;2;1840015151
+Davie;FL;Florida;Broward;26,0789;-80,2870;105821;1170,9;America/New_York;2;1840017272
+Riverview;FL;Florida;Hillsborough;27,8227;-82,3023;102467;856,7;America/New_York;2;1840014158
+Boca Raton;FL;Florida;Palm Beach;26,3752;-80,1080;97980;1296,5;America/New_York;3;1840014207
+St. Augustine;FL;Florida;St. Johns;29,8976;-81,3100;97703;593,7;America/New_York;3;1840015935
+Sunrise;FL;Florida;Broward;26,1547;-80,2997;96510;2300,4;America/New_York;2;1840016000
+Plantation;FL;Florida;Broward;26,1259;-80,2617;93130;1653,2;America/New_York;3;1840015142
+Alafaya;FL;Florida;Orange;28,5280;-81,1868;91531;1153,4;America/New_York;3;1840029102
+Palm Coast;FL;Florida;Flagler;29,5389;-81,2457;91082;368,7;America/New_York;3;1840015064
+Town 'n' Country;FL;Florida;Hillsborough;28,0106;-82,5763;89456;1551,0;America/New_York;3;1840029089
+Fort Myers;FL;Florida;Lee;26,6194;-81,8302;88699;858,3;America/New_York;3;1840014226
+Deerfield Beach;FL;Florida;Broward;26,3050;-80,1277;86455;2231,6;America/New_York;2;1840015136
+Melbourne;FL;Florida;Brevard;28,1086;-80,6627;84982;743,1;America/New_York;3;1840015960
+Pine Hills;FL;Florida;Orange;28,5818;-81,4692;83221;2634,9;America/New_York;2;1840014098
+Largo;FL;Florida;Pinellas;27,9088;-82,7712;82541;1712,4;America/New_York;3;1840015114
+Miami Beach;FL;Florida;Miami-Dade;25,8171;-80,1396;82400;4135,8;America/New_York;2;1840015150
+Boynton Beach;FL;Florida;Palm Beach;26,5281;-80,0811;80068;1913,4;America/New_York;3;1840014208
+Homestead;FL;Florida;Miami-Dade;25,4665;-80,4472;79996;2047,7;America/New_York;2;1840015159
+The Villages;FL;Florida;Sumter;28,9034;-81,9887;79108;935,5;America/New_York;3;1840014065
+Kendall;FL;Florida;Miami-Dade;25,6697;-80,3556;78402;1880,3;America/New_York;3;1840014244
+North Port;FL;Florida;Sarasota;27,0576;-82,1977;76975;299,1;America/New_York;3;1840015120
+Doral;FL;Florida;Miami-Dade;25,8152;-80,3565;74891;2087,9;America/New_York;2;1840015148
+Lauderhill;FL;Florida;Broward;26,1605;-80,2241;73987;3354,7;America/New_York;2;1840015146
+Daytona Beach;FL;Florida;Volusia;29,1995;-81,0982;73329;420,2;America/New_York;3;1840015068
+Tamarac;FL;Florida;Broward;26,2056;-80,2539;71578;2383,7;America/New_York;2;1840016001
+Poinciana;FL;Florida;Polk;28,1217;-81,4821;69311;372,4;America/New_York;3;1840014132
+Wesley Chapel;FL;Florida;Pasco;28,2106;-82,3238;68814;604,8;America/New_York;3;1840014118
+Weston;FL;Florida;Broward;26,1006;-80,4054;68029;1068,0;America/New_York;3;1840016003
+Delray Beach;FL;Florida;Palm Beach;26,4550;-80,0905;66646;1615,9;America/New_York;3;1840015123
+Port Charlotte;FL;Florida;Charlotte;26,9918;-82,1140;63913;866,5;America/New_York;3;1840014200
+Port Orange;FL;Florida;Volusia;29,1085;-81,0137;62849;904,4;America/New_York;3;1840015077
+Palm Harbor;FL;Florida;Pinellas;28,0847;-82,7481;61589;1369,9;America/New_York;3;1840014143
+Wellington;FL;Florida;Palm Beach;26,6461;-80,2699;61373;527,0;America/New_York;3;1840018311
+Sanford;FL;Florida;Seminole;28,7891;-81,2757;61272;994,9;America/New_York;3;1840015958
+Jupiter;FL;Florida;Palm Beach;26,9200;-80,1128;60926;1087,6;America/New_York;3;1840017255
+North Miami;FL;Florida;Miami-Dade;25,9008;-80,1686;59854;2732,1;America/New_York;2;1840015154
+St. Cloud;FL;Florida;Osceola;28,2363;-81,2779;59851;893,8;America/New_York;3;1840015971
+The Hammocks;FL;Florida;Miami-Dade;25,6700;-80,4482;59843;2929,1;America/New_York;2;1840029009
+Palm Beach Gardens;FL;Florida;Palm Beach;26,8466;-80,1679;59088;388,6;America/New_York;3;1840015125
+Horizon West;FL;Florida;Orange;28,4417;-81,6146;58595;691,1;America/New_York;3;1840038926
+Margate;FL;Florida;Broward;26,2466;-80,2119;58396;2573,8;America/New_York;2;1840015999
+Coconut Creek;FL;Florida;Broward;26,2803;-80,1842;57574;1989,0;America/New_York;3;1840015132
+Fountainebleau;FL;Florida;Miami-Dade;25,7723;-80,3460;57066;5568,0;America/New_York;2;1840028983
+Bradenton;FL;Florida;Manatee;27,4901;-82,5757;55795;1502,5;America/New_York;3;1840014173
+Sarasota;FL;Florida;Sarasota;27,3387;-82,5432;55508;1458,3;America/New_York;3;1840015988
+Apopka;FL;Florida;Orange;28,7015;-81,5316;55056;612,7;America/New_York;3;1840014093
+Westchester;FL;Florida;Miami-Dade;25,7471;-80,3523;53765;2610,2;America/New_York;2;1840014241
+Pinellas Park;FL;Florida;Pinellas;27,8589;-82,7078;53352;1275,8;America/New_York;3;1840015112
+Tamiami;FL;Florida;Miami-Dade;25,7556;-80,4016;52851;2924,0;America/New_York;2;1840029085
+Kendale Lakes;FL;Florida;Miami-Dade;25,7081;-80,4078;52661;2518,0;America/New_York;2;1840029045
+Country Club;FL;Florida;Miami-Dade;25,9407;-80,3102;50975;4711,3;America/New_York;2;1840029029
+Coral Gables;FL;Florida;Miami-Dade;25,7037;-80,2715;49696;1484,3;America/New_York;3;1840015147
+University;FL;Florida;Hillsborough;28,0771;-82,4335;49148;2998,7;America/New_York;2;1840073852
+Titusville;FL;Florida;Brevard;28,5727;-80,8193;48595;642,0;America/New_York;3;1840015962
+Ocoee;FL;Florida;Orange;28,5796;-81,5332;47290;1162,1;America/New_York;3;1840015098
+Fort Pierce;FL;Florida;St. Lucie;27,4255;-80,3431;47153;762,2;America/New_York;3;1840014178
+Winter Garden;FL;Florida;Orange;28,5421;-81,5967;46518;1099,9;America/New_York;3;1840015965
+Altamonte Springs;FL;Florida;Seminole;28,6615;-81,3953;45772;1942,2;America/New_York;3;1840014072
+Cutler Bay;FL;Florida;Miami-Dade;25,5765;-80,3356;44738;1747,2;America/New_York;3;1840017276
+North Lauderdale;FL;Florida;Broward;26,2113;-80,2209;44635;3728,8;America/New_York;2;1840015138
+Oakland Park;FL;Florida;Broward;26,1780;-80,1528;44056;2268,3;America/New_York;2;1840015139
+Greenacres;FL;Florida;Palm Beach;26,6270;-80,1371;43651;2801,0;America/New_York;2;1840036057
+North Miami Beach;FL;Florida;Miami-Dade;25,9302;-80,1659;43269;3448,7;America/New_York;2;1840015155
+Clermont;FL;Florida;Lake;28,5325;-81,7208;43266;927,0;America/New_York;3;1840015080
+Ormond Beach;FL;Florida;Volusia;29,2985;-81,1014;43127;478,7;America/New_York;3;1840015076
+North Fort Myers;FL;Florida;Lee;26,7244;-81,8485;42492;332,3;America/New_York;3;1840014222
+Meadow Woods;FL;Florida;Orange;28,3698;-81,3467;42207;1458,7;America/New_York;3;1840029057
+Hallandale Beach;FL;Florida;Broward;25,9854;-80,1423;41102;3767,6;America/New_York;2;1840014237
