@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: silicon-mile-412319
+    schema: weather_data
+
+    tables:
+      - name: forecast_data
+      - name: airline_lookup
+      - name: routes_lookup
