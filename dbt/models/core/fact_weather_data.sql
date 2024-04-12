@@ -18,14 +18,15 @@ with
 
 airline_route as (
                     select 
-                        routes.iata_code as iata_code_airline, 
+                        --routes.iata_code as iata_code_airline,
+                        airlines.iata_code as iata_code_airline, 
                         airlines.airline_name as airline_name, 
                         routes.source_airport_iata as source_airport_iata, 
                         routes.destination_airport_iata as destination_airport_iata
-                    from 
-                        routes_lookup_data routes
-                    left join 
+                    from
                         airline_lookup_data airlines
+                    left join 
+                        routes_lookup_data routes
                     
                     on airlines.iata_code = routes.iata_code
 ),
@@ -40,9 +41,10 @@ airline_aiport_route as (
     airport.city as city, 
     airport.state as state
 from 
-    airline_route airline_route
-inner join
     airport_lookup_data airport
+--inner join
+left join  
+    airline_route airline_route
 
 on airline_route.source_airport_iata = airport.iata_code
 ),
@@ -97,8 +99,11 @@ select
     CURRENT_TIMESTAMP() as insert_dt_local,
     ROW_NUMBER() OVER (PARTITION BY location, time_utc, iata_code_airline ORDER BY time_utc) as rn
 
-from forecast_data forecast_data
-left join airline_aiport_route airline_aiport_route
+from 
+    forecast_data forecast_data
+left join 
+    airline_aiport_route airline_aiport_route
+
 on forecast_data.location = airline_aiport_route.city
 )
 
