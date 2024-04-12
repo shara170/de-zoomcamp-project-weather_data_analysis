@@ -18,31 +18,33 @@ with
 
 airline_route as (
                     select 
-                        routes_lookup_data.iata_code as iata_code_airline, 
-                        airline_lookup_data.airline_name, 
-                        routes_lookup_data.source_airport_iata, 
-                        routes_lookup_data.destination_airport_iata
+                        routes.iata_code as iata_code_airline, 
+                        airlines.airline_name as airline_name, 
+                        routes.source_airport_iata as source_airport_iata, 
+                        routes.destination_airport_iata as destination_airport_iata
                     from 
-                        routes_lookup_data routes_lookup_data
+                        routes_lookup_data routes
                     left join 
-                        airline_lookup_data airline_lookup_data
+                        airline_lookup_data airlines
                     
-                    on airline_lookup_data.iata_code = routes_lookup_data.iata_code
+                    on airlines.iata_code = routes.iata_code
 ),
+
   
-airline_aiport_route as (select 
+airline_aiport_route as (
+    select 
     airline_route.iata_code_airline as iata_code_airline, 
     airline_route.airline_name as airline_name, 
     airline_route.source_airport_iata as source_airport_iata, 
     airline_route.destination_airport_iata as destination_airport_iata, 
-    airport_lookup_data.city as city, 
-    airport_lookup_data.state as state
+    airport.city as city, 
+    airport.state as state
 from 
     airline_route airline_route
 inner join
-    airport_lookup_data airport_lookup_data
+    airport_lookup_data airport
 
-on airline_route.source_airport_iata = airport_lookup_data.iata_code
+on airline_route.source_airport_iata = airport.iata_code
 ),
 
 combined as(
@@ -93,7 +95,7 @@ select
     forecast_data.windgust as windgust,
     forecast_data.windspeed as windspeed,
     CURRENT_TIMESTAMP() as insert_dt_local,
-    ROW_NUMBER() OVER (PARTITION BY location, time_utc ORDER BY time_utc) as rn
+    ROW_NUMBER() OVER (PARTITION BY location, time_utc, iata_code_airline ORDER BY time_utc) as rn
 
 from forecast_data forecast_data
 left join airline_aiport_route airline_aiport_route
