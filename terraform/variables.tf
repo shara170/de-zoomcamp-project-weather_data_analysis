@@ -25,14 +25,20 @@ variable "bq_dataset_name" {
 }
 
 variable "gcs_bucket_name" {
-  description = "My Storage Bucket Name"
-  default     = "silicon-mile-412319-weather-in"
+  description = "My Storage Bucket Name for storing API data"
+  default     = "silicon-mile-412319-weather"
 
 }
 
-variable "gcs_bucket_name_city" {
-  description = "My Storage Bucket Name"
-  default     = "silicon-mile-412319-city-data"
+# variable "gcs_bucket_name_city" {
+#   description = "My Storage Bucket Name"
+#   default     = "silicon-mile-412319-city-data"
+
+# }
+
+variable "gcs_bucket_data" {
+  description = "My Storage Bucket Name for storing other datasets"
+  default     = "silicon-mile-412319-data"
 
 }
 

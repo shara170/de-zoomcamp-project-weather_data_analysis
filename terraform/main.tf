@@ -30,8 +30,8 @@ resource "google_storage_bucket" "weather-bucket" {
 }
 
 
-resource "google_storage_bucket" "city-bucket" {
-  name          = var.gcs_bucket_name_city
+resource "google_storage_bucket" "data-bucket" {
+  name          = var.gcs_bucket_data
   location      = var.location
   force_destroy = true
 
@@ -44,6 +44,22 @@ resource "google_storage_bucket" "city-bucket" {
     }
   }
 }
+
+
+# resource "google_storage_bucket" "city-bucket" {
+#   name          = var.gcs_bucket_name_city
+#   location      = var.location
+#   force_destroy = true
+
+#   lifecycle_rule {
+#     condition {
+#       age = 1
+#     }
+#     action {
+#       type = "AbortIncompleteMultipartUpload"
+#     }
+#   }
+# }
 
 # Code to create bucket - END
 
