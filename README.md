@@ -4,7 +4,7 @@
 
 
 ## Tech Stack
-###Google Cloud Platform
+### Google Cloud Platform
 [Mage](https://docs.mage.ai/introduction/overview)  - Data and workflow orchestration
 [Google Data Storage](https://cloud.google.com/storage?hl=en) - GCS for storing our data in Data Lake
 [Google BigQuery](https://cloud.google.com/bigquery?hl=en) - Google BigQuery as a Data Warehouse solution for analysing our data
