@@ -4,7 +4,7 @@
 
 
 ## Tech Stack
-Mage - Data and workflow orchestration
+https://docs.mage.ai/introduction/overview - Data and workflow orchestration
 
 
 
