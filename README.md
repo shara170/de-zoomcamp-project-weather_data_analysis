@@ -4,8 +4,8 @@
 
 
 ## Tech Stack
-- Google Cloud Platform
-- - [Google Data Storage](https://cloud.google.com/storage?hl=en) - GCS for storing our data in Data Lake
+- Google Cloud Platform- GCP platform for providing infrastructure for cloud computation, data lake storage and data warehouse solution
+  - [Google Data Storage](https://cloud.google.com/storage?hl=en) - GCS for storing our data in Data Lake
   - [Google BigQuery](https://cloud.google.com/bigquery?hl=en) - Google BigQuery as a Data Warehouse solution for analysing our data
 - [Mage](https://docs.mage.ai/introduction/overview)  - Data and workflow orchestration
 - [Terraform](https://www.terraform.io/) - Infrastructure as a code (IaC) to create and manipulate GCP resources
