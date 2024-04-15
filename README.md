@@ -42,9 +42,9 @@ Pipeline description is as below:
   - Additionally, triggers have been configured to automatically execute the aforementioned three steps at a specific time each day, precisely at midnight.
  
 - **etl_gcs_to_bigquery_weather**:
- - In the initial step, data extraction from the GCS bucket retrieves information solely for the present day. For instance, if today is April 11, 2024, only data corresponding to that particular day is ingested, excluding any preceding days' data.
- - No transformations are necessary in the transformation block
- - In the final step, every day data is appended to a table in BigQuery
+  - In the initial step, data extraction from the GCS bucket retrieves information solely for the present day. For instance, if today is April 11, 2024, only data corresponding to that particular day is ingested, excluding any preceding days' data.
+  - No transformations are necessary in the transformation block
+  - In the final step, every day data is appended to a table in BigQuery
 
 
 ## Data set Description
