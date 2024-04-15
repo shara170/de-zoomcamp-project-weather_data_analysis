@@ -39,7 +39,16 @@ Pipeline description is as below:
     
   - In the final stage, the processed data is encapsulated within a Parquet file to compress it effectively. Subsequently, this compressed data is exported to a GCS bucket for storage.
     
-  - 
+  - Since this is a one-time load, there are no triggers set for this pipeline. It needs to be manually executed
+ 
+- **airline_gcs_to_bigquery**:
+  - In this pipeline, Parquet airline data is extracted from the bucket where it was deposited by the "airline_to_gcs" pipeline
+    
+  - No transformations are necessary as they were handled in airline_to_gcs pipeline
+    
+  - In the last step, the data is exported to the "airline_lookup" table within the "weather_data" dataset in BigQuery
+    
+  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "airline_to_gcs" pipeline is finalized.
 
 
 
