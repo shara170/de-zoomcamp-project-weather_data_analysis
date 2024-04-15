@@ -32,6 +32,24 @@ Within this project, the orchestration tool at play is Mage. It systematically r
 Within this project, there are a total of 6 pipelines in operation. Among them, 2 are dynamic, meaning they run periodically. The remaining 4 pipelines are tasked with fetching static data from Kaggle, transferring it into GCS, and then seamlessly integrating it into the data warehouse.
 
 Pipeline description is as below:
+- **airline_to_gcs**:
+  - Data is initially sourced from Kaggle, providing comprehensive details about airlines, including their codes and names. Subsequently, the data is uploaded to a GitHub repository, and a link is utilized to ingest the data into the pipeline for subsequent processing
+    
+  - In the subsequent step, basic transformations are applied to clean the dataset, including actions such as filling missing values and dropping unwanted entries
+    
+  - In the final stage, the processed data is encapsulated within a Parquet file to compress it effectively. Subsequently, this compressed data is exported to a GCS bucket for storage.
+    
+  - 
+
+
+
+
+
+
+
+
+
+
 
 - **etl_web_to_gcs_weather**: 
   - In the initial phase, data ingestion occurs from Kaggle, housing a static dataset providing insights of all cities within the state of Florida. For example, city name, lat, long, etc.
