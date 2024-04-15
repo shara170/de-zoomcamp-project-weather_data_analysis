@@ -32,6 +32,8 @@ Within this project, the orchestration tool at play is Mage. It systematically r
 Within this project, there are a total of 6 pipelines in operation. Among them, 2 are dynamic, meaning they run periodically. The remaining 4 pipelines are tasked with fetching static data from Kaggle, transferring it into GCS, and then seamlessly integrating it into the data warehouse.
 
 Pipeline description is as below:
+
+Static pipelines: 
 - **airline_to_gcs**:
   - Data is initially sourced from Kaggle, providing comprehensive details about airlines, including their codes and names. Subsequently, the data is uploaded to a GitHub repository, and a link is utilized to ingest the data into the pipeline for subsequent processing
     
@@ -48,18 +50,27 @@ Pipeline description is as below:
     
   - In the last step, the data is exported to the "airline_lookup" table within the "weather_data" dataset in BigQuery
     
-  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "airline_to_gcs" pipeline is finalized.
+  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "airline_to_gcs" pipeline is finalized
+ 
+- **routes_to_gcs**:
+  - Data is initially sourced from Kaggle, providing comprehensive details about airline routes such as origin, destination, airline code, etc. Subsequently, the data is uploaded to a GitHub repository, and a link is utilized to ingest the data into the pipeline for subsequent processing
+    
+  - In the subsequent step, basic transformations are applied to clean the dataset, including actions such as filling missing values
+    
+  - In the final stage, the processed data is encapsulated within a Parquet file to compress it effectively. Subsequently, this compressed data is exported to a GCS bucket for storage
+    
+  - Since this is a one-time load, there are no triggers set for this pipeline. It needs to be manually executed
 
+- **routes_gcs_to_bigquery**:
+  - In this pipeline, Parquet airline route data is extracted from the bucket where it was deposited by the "routes_to_gcs" pipeline
+    
+  - No transformations are necessary as they were handled in routes_to_gcs pipeline
+    
+  - In the last step, the data is exported to the "routes_lookup" table within the "weather_data" dataset in BigQuery
+    
+  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "routes_to_gcs" pipeline is finalized.
 
-
-
-
-
-
-
-
-
-
+Dynamic pipelines:
 - **etl_web_to_gcs_weather**: 
   - In the initial phase, data ingestion occurs from Kaggle, housing a static dataset providing insights of all cities within the state of Florida. For example, city name, lat, long, etc.
   - In the subsequent step, further data ingestion takes place by issuing API calls for each city in Florida to retrieve the upcoming 24-hour weather forecast. Following this, a series of transformations are applied to the ingested data
