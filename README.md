@@ -33,11 +33,18 @@ Within this project, there are a total of 6 pipelines in operation. Among them, 
 
 Pipeline description is as below:
 
-- **etl_web_to_gcs_weather**:
+- **etl_web_to_gcs_weather**: 
   - In the initial phase, data ingestion occurs from Kaggle, housing a static dataset providing insights of all cities within the state of Florida. For example, city name, lat, long, etc.
   - In the subsequent step, further data ingestion takes place by issuing API calls for each city in Florida to retrieve the upcoming 24-hour weather forecast. Following this, a series of transformations are applied to the ingested data.
   
   - In the final step, the processed data is exported to a GCS bucket, with each day's data neatly organized into its respective folder.
+ 
+  - Additionally, triggers have been configured to automatically execute the aforementioned three steps at a specific time each day, precisely at midnight.
+ 
+- **etl_gcs_to_bigquery_weather**:
+ - In the initial step, data extraction from the GCS bucket retrieves information solely for the present day. For instance, if today is April 11, 2024, only data corresponding to that particular day is ingested, excluding any preceding days' data.
+ - No transformations are necessary in the transformation block
+ - In the final step, every day data is appended to a table in BigQuery
 
 
 ## Data set Description
