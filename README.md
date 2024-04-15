@@ -34,7 +34,7 @@ Within this project, there are a total of 6 pipelines in operation. Among them, 
 Pipeline description is as below:
 
 - **etl_web_to_gcs_weather**:
-- - This pipeline first consumes a static dataset from Kaggle which gives information of all the cities in the state of Florida. 
+  - This pipeline first consumes a static dataset from Kaggle which gives information of all the cities in the state of Florida. 
 
 ## Data set Description
 
