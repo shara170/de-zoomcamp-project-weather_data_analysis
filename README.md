@@ -34,7 +34,11 @@ Within this project, there are a total of 6 pipelines in operation. Among them, 
 Pipeline description is as below:
 
 - **etl_web_to_gcs_weather**:
-  - This pipeline first consumes a static dataset from Kaggle which gives information of all the cities in the state of Florida. 
+  - In the initial phase, data ingestion occurs from Kaggle, housing a static dataset providing insights of all cities within the state of Florida. For example, city name, lat, long, etc.
+  - In the subsequent step, further data ingestion takes place by issuing API calls for each city in Florida to retrieve the upcoming 24-hour weather forecast. Following this, a series of transformations are applied to the ingested data.
+  
+  - In the final step, the processed data is exported to a GCS bucket, with each day's data neatly organized into its respective folder.
+
 
 ## Data set Description
 
