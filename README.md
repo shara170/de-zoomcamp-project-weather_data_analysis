@@ -88,6 +88,22 @@ Dynamic pipelines:
     
   - The triggers are configured to activate one hour after the completion of the aforementioned pipeline, ensuring timely consumption of the data deposited in the GCS bucket every day
 
+#### 2. Data Warehouse
+- BigQuery is integral to this project, with all data, both one-time loads and ongoing, housed within the "weather_data" dataset
+  
+- Airline information is stored in the "airline_lookup" table within "weather_data" dataset
+  
+- Route information is stored in the "routes_lookup" table within "weather_data" dataset
+  
+- Weather forecast for the next 24 hours for few cities of Florida are stored within "forecast_data" dataset
+
+#### 3. Data Transformations
+- Transformation of data in the underlying BigQuery tables are done using dbt cloud
+
+- Weather forecast data is seamlessly integrated with airline and route information. This integration facilitates advanced visualization, enabling deeper insights that aid in making informed decisions regarding whether flights should proceed or be grounded
+  
+- The job is scheduled for daily execution in the production environment using dbt Cloud. Subsequently, the transformed and integrated production data is deposited into the designated "prod" dataset in BigQuery
+
 
 ## Data set Description
 
