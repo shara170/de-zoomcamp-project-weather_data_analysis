@@ -21,7 +21,11 @@
 
 ## Data Flow Overview
 
-1. Data 
+Pipelines 
+- Two Dynamic pipelines
+- Four static pipelines
+
+1. Data Ingestion
 
 
 ## Data set Description
