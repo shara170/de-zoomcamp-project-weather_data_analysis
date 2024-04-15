@@ -103,6 +103,17 @@ Dynamic pipelines:
 - Weather forecast data is seamlessly integrated with airline and route information. This integration facilitates advanced visualization, enabling deeper insights that aid in making informed decisions regarding whether flights should proceed or be grounded
   
 - The job is scheduled for daily execution in the production environment using dbt Cloud. Subsequently, the transformed and integrated production data is deposited into the designated "prod" dataset in BigQuery
+  
+- Core tables are:
+  - dim_airline_lookup
+  - dim_airports_lookup
+  - dim_routes_lookup
+  - fact_weather_data
+  - dm_daily_averages_snow
+  - dm_daily_averages_wind
+
+  <img width="1124" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/294c5355-c5c3-4ccb-a520-1de007678c1e">
+
 
 
 ## Data set Description
