@@ -25,8 +25,15 @@ Pipelines
 - Two Dynamic pipelines
 - Four static pipelines
 
-### 1. Data Ingestion
+#### 1. Data Ingestion
 
+Within this project, the orchestration tool at play is Mage. It systematically retrieves data in batches from an API endpoint and gathers static datasets from Kaggle. Following data manipulation, it diligently deposits the processed data into GCS buckets. Subsequently, the data is extracted and meticulously loaded into our designated data warehouse.
+
+Within this project, there are a total of 6 pipelines in operation. Among them, 2 are dynamic, meaning they run periodically. The remaining 4 pipelines are tasked with fetching static data from Kaggle, transferring it into GCS, and then seamlessly integrating it into the data warehouse.
+
+Pipeline description is as below:
+
+##### a. etl_web_to_gcs_weather:
 
 ## Data set Description
 
