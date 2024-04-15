@@ -45,6 +45,7 @@ Pipeline description is as below:
   - In the initial step, data extraction from the GCS bucket retrieves information solely for the present day. For instance, if today is April 11, 2024, only data corresponding to that particular day is ingested, excluding any preceding days' data.
   - No transformations are necessary in the transformation block
   - In the final step, every day data is appended to a table in BigQuery
+  - The triggers are configured to activate one hour after the completion of the aforementioned pipeline, ensuring timely consumption of the data deposited in the GCS bucket every day.
 
 
 ## Data set Description
