@@ -142,9 +142,22 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - After completing the above step on creating a VM instance, login to your VM instance either by opening Terminal on Mac (instructions for windows) or open Virtual Studio code and connect to VM instance (to add instructions)
 - External IP (Note that external IP changes everytime, show how to chnage the IP in config file)
 - Setup Terraform on your VM (Virtual) instance (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15))
+- Keep logged into your VM to follow next steps (Installing docker)
 
 
-#### 5. Install Docker
+#### 5. Install Docker:
+- Follow [Docker install](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15) to install docker on your VM
+
+#### 6. Fire up terraform:
+- Now that the environment setup is completed, its time to create google resource such as GCS bucket for data storage and BigQuery datasets for data warehousing
+- Navigate into the directory "terraform" directory:
+  ```
+  cd terraform/
+  ```
+- Edit the variables.tf file to match your resources such as Project ID (put the project ID in the default sub-section of project section), Region, bq_dataset_name (BigQuery dataset name), gcs_bucket_name (GCS bucket name), gcs_bucket_data (GCS bucket name to store the data produced by the pipelines)
+- Run the following:
+  - ``` terraform init ``` This command is used to initialize terraform and get all the cloud providers
+  - 
 
 
 ## Dashboard
