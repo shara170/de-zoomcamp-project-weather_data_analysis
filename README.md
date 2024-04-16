@@ -124,48 +124,40 @@ Dynamic pipelines:
 
 ## Reproducing the project
 
-#### 1. Clone the repository:
-```
-git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git
-```
-
-#### 2. Setup GCP account:
-- Setup up a GCP free account if you do not have one
-- Create a new project id
+#### 1. Setup GCP account:
+- Setup up a GCP account and create a new project id
 - Setup a service account. Select roles for this account (Bigquery Admin, Compute Admin and storage Admin Roles)
 - Create a key and download this file in your computer, it will be a json file. This key will be used to authenticate google services and resources
-  
-
-#### 3. Connect to VM:
-- Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
-- The second Video shows how to create a config file to aid update and manage the External IPs of the compute instance anytime you suspend/restart the compute instance. Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier.
-- [Configure External IP](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
-  
-
-#### 4. Setup Terraform:
-- After completing the above step on creating a VM instance, login to your VM instance either by opening Terminal on Mac (instructions for windows) or open Virtual Studio code and connect to VM instance (to add instructions)
-- External IP (Note that external IP changes everytime, show how to chnage the IP in config file)
-- Setup Terraform on your VM (Virtual) instance (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15))
-- Keep logged into your VM to follow next steps (Installing docker)
 
 
-#### 5. Install Docker:
-- Follow [Docker install](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15) to install docker on your VM
-  
+#### 2. Install Docker:
+- Follow [Docker install](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15)
 
-#### 6. Fire up terraform:
+
+#### 3. Setup Terraform and Fire up Terraform:
+- Setup Terraform (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16))
+- Ensure that terraform has already been installed locally. Also ensure that compute instance API and BigQuery API has been enabled
 - Now that the environment setup is completed, its time to create google resource such as GCS bucket for data storage and BigQuery datasets for data warehousing
 - Navigate into the directory "terraform" directory:
   ```
   cd terraform/
   ```
-- Edit the variables.tf file to match your resources such as Project ID (put the project ID in the default sub-section of project section), Region, bq_dataset_name (BigQuery dataset name), gcs_bucket_name (GCS bucket name), gcs_bucket_data (GCS bucket name to store the data produced by the pipelines)
+- Edit the variables.tf file to match your resources such as Project ID (put the project ID in the default sub-section of project section), Region, bq_dataset_name (BigQuery dataset name), gcs_bucket_name (GCS bucket name for storing API call data), gcs_bucket_data (GCS bucket name to store the data produced by the pipelines)
 - Run the following:
   - ``` terraform init ``` This command is used to initialize terraform and get all the cloud providers
   - ``` terraform plan ``` This command will show the resources that will be created
   - ``` terraform apply ``` This command will create the resources which are defined in the main.tf file (In this case -- resources will be created)
-    
-Add instructions to include *.json in gitignore
+  - 
+  
+
+#### 3. Connect to VM: (Optional if are using compute engine)
+- Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
+- Create a config file to update and manage the External IPs of the VM instance anytime its suspended/restarted [Configure External IP](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
+- Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier. 
+- Open your terminal and ssh into your remote instance. The remote instance is bare and so install the necessary packages and git clone this repository
+```
+git clone https://github.com/emilianolel/dez-project-emi.git
+```
 
 #### 7. Setup Mage:
 - Navigate to the mage folder by running below command:
@@ -173,6 +165,8 @@ Add instructions to include *.json in gitignore
   cd mage
   ```
 -  Rename dev.env to .env
+-  Move your json key created in step 2 in the "mage" folder
+- NOTE: Don't forget to include your key which is a .json file in gitignore, by doing this you will be avoiding accidental commit of secrets into github. You can do this by putting *.json in gitignore 
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Setup environment vairables for Mage (Needs to be added)
 -  Run docker compose build to build mage using docker
