@@ -149,7 +149,7 @@ Dynamic pipelines:
   - ``` terraform apply ``` This command will create the resources which are defined in the main.tf file (In this case -- resources will be created)
   
 
-#### 3. Connect to VM: (Optional if are using compute engine)
+#### 4. Connect to VM: (Optional if are using compute engine)
 - Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
 - Create a config file to update and manage the External IPs of the VM instance anytime its suspended/restarted [Configure External IP](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
 - Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier. 
@@ -159,7 +159,7 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 ```
 
 
-#### 7. Setup Mage:
+#### 5. Setup Mage:
 - Navigate to the mage folder by running below command:
   ```
   cd mage
@@ -182,14 +182,14 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 -  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
 -  Create the triggers and execute the pipelines (add instructions)
 
-#### 8. DBT:
+#### 6. DBT:
 - In this project, I have used dbt cloud but it can be used locally as well
 - Open a free dbt account [here](https://www.getdbt.com/signup)
 - Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
 - Replicate the file structue as in the folder "dbt" of this project (Add more things here)
 
 
-#### 9. Visualization:
+#### 7. Visualization:
 
 
 
