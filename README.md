@@ -147,7 +147,6 @@ Dynamic pipelines:
   - ``` terraform init ``` This command is used to initialize terraform and get all the cloud providers
   - ``` terraform plan ``` This command will show the resources that will be created
   - ``` terraform apply ``` This command will create the resources which are defined in the main.tf file (In this case -- resources will be created)
-  - 
   
 
 #### 3. Connect to VM: (Optional if are using compute engine)
@@ -156,8 +155,9 @@ Dynamic pipelines:
 - Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier. 
 - Open your terminal and ssh into your remote instance. The remote instance is bare and so install the necessary packages and git clone this repository
 ```
-git clone https://github.com/emilianolel/dez-project-emi.git
+git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
 ```
+
 
 #### 7. Setup Mage:
 - Navigate to the mage folder by running below command:
@@ -165,12 +165,14 @@ git clone https://github.com/emilianolel/dez-project-emi.git
   cd mage
   ```
 -  Rename dev.env to .env
--  Move your json key created in step 2 in the "mage" folder
-- NOTE: Don't forget to include your key which is a .json file in gitignore, by doing this you will be avoiding accidental commit of secrets into github. You can do this by putting *.json in gitignore 
+-  Move your json key created in step 1 in the "mage" folder
+-  NOTE: Don't forget to include your key which is a .json file in gitignore, by doing this you will be avoiding accidental commit of secrets into github. You can do this by putting *.json in gitignore 
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Setup environment vairables for Mage (Needs to be added)
--  Run docker compose build to build mage using docker
--  Once the docker image is created, run below command in your terminal to fire up the Mage application. Ensure the port has been forwarded to 6789
+-  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
+-  To pull the latest image from the Mage repo, execute below:
+   ``` docker pull mageai/mageai:latest ```
+-  Once the docker image is created, execute below command in your terminal to fire up the Mage application. Ensure the port has been forwarded to 6789
    ```
    docker-compose up
    ```
