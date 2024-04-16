@@ -134,9 +134,11 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - Create a new project id
 - Setup a service account. Select roles for this account (Bigquery Admin, Compute Admin and storage Admin Roles)
 - Create a key and download this file in your computer, it will be a json file. This key will be used to authenticate google services and resources
+  
 
 #### 3. Connect to VM:
 - Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
+  
 
 #### 4. Setup Terraform:
 - After completing the above step on creating a VM instance, login to your VM instance either by opening Terminal on Mac (instructions for windows) or open Virtual Studio code and connect to VM instance (to add instructions)
@@ -147,6 +149,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 
 #### 5. Install Docker:
 - Follow [Docker install](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15) to install docker on your VM
+  
 
 #### 6. Fire up terraform:
 - Now that the environment setup is completed, its time to create google resource such as GCS bucket for data storage and BigQuery datasets for data warehousing
@@ -157,7 +160,39 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - Edit the variables.tf file to match your resources such as Project ID (put the project ID in the default sub-section of project section), Region, bq_dataset_name (BigQuery dataset name), gcs_bucket_name (GCS bucket name), gcs_bucket_data (GCS bucket name to store the data produced by the pipelines)
 - Run the following:
   - ``` terraform init ``` This command is used to initialize terraform and get all the cloud providers
-  - 
+  - ``` terraform plan ``` This command will show the resources that will be created
+  - ``` terraform apply ``` This command will create the resources which are defined in the main.tf file (In this case -- resources will be created)
+    
+Add instructions to include *.json in gitignore
+
+#### 7. Setup Mage:
+- Navigate to the mage folder by running below command:
+  ```
+  cd mage
+  ```
+-  Rename dev.env to .env
+-  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
+-  Setup environment vairables for Mage (Needs to be added)
+-  Run docker compose build to build mage using docker
+-  Once the docker image is created, run below command in your terminal to fire up the Mage application. Ensure the port has been forwarded to 6789
+   ```
+   docker-compose up
+   ```
+-  Navigate to http://localhost:6789/ in your web browser to access Mage application
+-  File structure should look like this and you should be able to see all the pipelines in your structure: (Add the image of the file structure)
+-  (Add instructions to make changes to io_config.yml)
+-  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
+-  Create the triggers and execute the pipelines (add instructions)
+
+#### 8. DBT:
+- In this project, I have used dbt cloud but it can be used locally as well
+- Open a free dbt account [here](https://www.getdbt.com/signup)
+- Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
+- Replicate the file structue as in the folder "dbt" of this project (Add more things here)
+
+
+#### 9. Visualization:
+
 
 
 ## Dashboard
