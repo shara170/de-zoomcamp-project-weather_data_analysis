@@ -126,8 +126,17 @@ Dynamic pipelines:
 
 #### 1. Clone the repository:
 ```
-git clone 
+git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git
 ```
+
+#### 2. Setup GCP account:
+- Setup up a GCP free account if you do not have one
+- Create a new project id
+- Setup a service account. Select roles for this account (Bigquery Admin, Compute Admin and storage Admin Roles)
+- Create a key and download this file in your computer, it will be a json file. This key will be used to authenticate google services and resources
+
+#### 3. Connect to VM:
+- Set up Virtual Machine on GCP (Follow this VM instance to see the instructions on how to create VM instance)
 
 
 ## Dashboard
