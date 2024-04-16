@@ -136,7 +136,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - Create a key and download this file in your computer, it will be a json file. This key will be used to authenticate google services and resources
 
 #### 3. Connect to VM:
-- Set up Virtual Machine on GCP (Follow this VM instance to see the instructions on how to create VM instance)
+- Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
 
 
 ## Dashboard
