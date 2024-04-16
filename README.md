@@ -137,10 +137,9 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
   
 
 #### 3. Connect to VM:
-- Generate SSH key (Refer to the video [here](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
-- Upload public key to GCP (Refer to the video [here](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17))
 - Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
 - The second Video shows how to create a config file to aid update and manage the External IPs of the compute instance anytime you suspend/restart the compute instance. Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier.
+- [Configure External IP](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
   
 
 #### 4. Setup Terraform:
