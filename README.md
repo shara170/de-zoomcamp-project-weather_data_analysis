@@ -286,6 +286,8 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 
 
 #### 8. Visualization:
+Looker studio has been used in this project to visualize the data and to draw some insights from the data. Below are the steps to replicate the visualization dashboard:
+- 
 
 
 
