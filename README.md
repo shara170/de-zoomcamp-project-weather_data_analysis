@@ -285,10 +285,13 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
   - Run the job manually
 
 
-#### 8. Visualization:
+#### 8. Visualization: 
 Looker studio has been used in this project to visualize the data and to draw some insights from the data. Below are the steps to replicate the visualization dashboard:
-- 
 
-
+- Create a blank report on Looker by navigating [here](https://lookerstudio.google.com/u/0/navigation/reporting)
+- Select the BigQuery connector and connect to the processed data lying in BigQuery
+- Select your project > prod (This is the dataset which we created from dbt cloud) > fact_weather_data (This is the fact table we created using dbt cloud model)
+- Start building dashboard
+ 
 
 ## Dashboard
