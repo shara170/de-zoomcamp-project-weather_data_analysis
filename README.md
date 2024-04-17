@@ -205,7 +205,7 @@ Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmoham
 
 #### 5. Clone the repository (In case you have missed this step above):
 ```
-git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
+git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git
 ```
 
 
