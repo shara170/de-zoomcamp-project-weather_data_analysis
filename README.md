@@ -112,9 +112,6 @@ Dynamic pipelines:
   - dm_daily_averages_snow
   - dm_daily_averages_wind
 
-  <img width="1124" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/294c5355-c5c3-4ccb-a520-1de007678c1e">
-
-
 
 ## Data set Description
 
@@ -210,7 +207,19 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 - In this project, I have used dbt cloud but it can be used locally as well
 - Open a free dbt account [here](https://www.getdbt.com/signup)
 - Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
-- Replicate the file structue as in the folder "dbt" of this project (Add more things here)
+- Replicate the file structue as in the folder "dbt" of this project. This is how it will look like:
+
+  <img width="413" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/ca0211f9-ad97-4c83-a12e-39a18d5f4977">
+
+- DAG will look like this:
+
+  <img width="1124" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/294c5355-c5c3-4ccb-a520-1de007678c1e">
+
+- Build the models using ``` dbt build ```
+- Once the models are successfully build, dataset in BigQuery will look like this:
+
+  <img width="352" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/bb0a449b-7f7b-4fbc-87c4-20747554b1dc">
+
 - Create Environment:
   - Navigate to Deploy > Environments > Create Environment
   - Environment name: Prod
@@ -225,6 +234,7 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
     - Timing: Specific hours
     - Runs at(UTC): 9
     - Days of the week: Select all days
+  - Run the job manually
 
 
 #### 7. Visualization:
