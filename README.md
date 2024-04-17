@@ -129,14 +129,13 @@ Two types of dataset is used in this project: Weather forecast data and airline 
 There are three types of airline dataset used in this project which are taken from Kaggle (For the simplicity of this project, I am using static dataset)
 Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmohammad/world-airports-and-airlines-datasets)
 
-  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the "data" folder of my repo. xThis dataset contains the information about the airlines such as:
+  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the "data" folder of my repo. This dataset contains the information about the airlines such as:
       - airline_name: Name of the airline such as United Airlines, 	Air Midwest, etc
       - iata_code: 2-letter airline code such as UA, ZV, etc
       - icao_code: 3-letter airline code such as LAB, AMW etc
       - country: Country or territory where airline is incorporated
       - active: "Y" if the airline is or has until recently been operational, "N" if it is defunct
-  b. Routes data: This dataset was present with the name "routes.dat" in Kaggle and is placed in the "data" folder of this repo
-    - This dataset contains the information about the routes of the airlines such as:
+  - Routes data: This dataset was present with the name "routes.dat" in Kaggle and is placed in the "data" folder of this repo. This dataset contains the information about the routes of the airlines such as:
       - iata_code: 2-letter code of the airline
       - airline_id: Airline Unique OpenFlights identifier for airline
       - source airport: 3-letter (IATA) or 4-letter (ICAO) code of the source airport
@@ -144,7 +143,7 @@ Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmoham
       - destination airport - 3-letter (IATA) or 4-letter (ICAO) code of the destination airport
       - destination airport ID - Unique OpenFlights identifier for destination airport
       - codeshare - "Y" if this flight is a codeshare (that is, not operated by Airline, but another carrier), empty otherwise
-  c. Airport data: I was unable to source this dataset from Kaggle and have used multiple sources to combine this data. This dataset is present in the "data" folder of my repo with   
+  - Airport data: I was unable to source this dataset from Kaggle and have used multiple sources to combine this data. This dataset is present in the "data" folder of my repo with   
      name "airports_lookup.csv".
      I have used this dataset as the seed in the dbt cloud
      - iata_code: 3-letter code of the airport
