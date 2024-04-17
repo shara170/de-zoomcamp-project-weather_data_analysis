@@ -211,6 +211,20 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 - Open a free dbt account [here](https://www.getdbt.com/signup)
 - Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
 - Replicate the file structue as in the folder "dbt" of this project (Add more things here)
+- Create Environment:
+  - Navigate to Deploy > Environments > Create Environment
+  - Environment name: Prod
+  - Environment type: Deployment
+  - Deployment credentials > Dataset: prod
+- Create Job:
+  - Navigate to the env "Prod" > Create Job > Deploy Job
+  - Job Name: Nightly
+  - Environment: Production
+  - Execution Settings > Commands: dbt run, dbt build
+  - Runs on Schedule:
+    - Timing: Specific hours
+    - Runs at(UTC): 9
+    - Days of the week: Select all days
 
 
 #### 7. Visualization:
