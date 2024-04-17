@@ -20,24 +20,18 @@ variable "location" {
 }
 
 variable "bq_dataset_name" {
-  description = "My BigQuery dataset name"
+  description = "BigQuery dataset name"
   default     = "weather_data"
 }
 
 variable "gcs_bucket_name" {
-  description = "My Storage Bucket Name for storing API data"
+  description = "Storage Bucket Name for storing API data"
   default     = "silicon-mile-412319-weather"
 
 }
 
-# variable "gcs_bucket_name_city" {
-#   description = "My Storage Bucket Name"
-#   default     = "silicon-mile-412319-city-data"
-
-# }
-
 variable "gcs_bucket_data" {
-  description = "My Storage Bucket Name for storing other datasets"
+  description = "Storage Bucket Name for storing parquet data files"
   default     = "silicon-mile-412319-data"
 
 }
