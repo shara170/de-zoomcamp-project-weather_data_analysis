@@ -177,7 +177,7 @@ Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmoham
 - Setup Terraform (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16))
 - Clone this repo:
   ```
-  git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
+  git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git
   ```
 - Navigate into the "terraform" directory by executing below command:
   ```
