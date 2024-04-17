@@ -129,7 +129,7 @@ Two types of dataset is used in this project: Weather forecast data and airline 
 There are three types of airline dataset used in this project which are taken from Kaggle (For the simplicity of this project, I am using static dataset)
 Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmohammad/world-airports-and-airlines-datasets)
 
-  a. Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the "data" folder of my repo
+  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the "data" folder of my repo
     - This dataset contains the information about the airlines such as:
       - airline_name: Name of the airline such as United Airlines, 	Air Midwest, etc
       - iata_code: 2-letter airline code such as UA, ZV, etc
