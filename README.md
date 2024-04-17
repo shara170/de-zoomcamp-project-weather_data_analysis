@@ -133,6 +133,10 @@ Dynamic pipelines:
 
 #### 3. Setup Terraform and Fire up Terraform:
 - Setup Terraform (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16))
+- Clone this repo:
+  ```
+  git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
+  ```
 - Navigate into the "terraform" directory by executing below command:
   ```
   cd terraform/
@@ -157,7 +161,7 @@ Dynamic pipelines:
 - Open your terminal and ssh into your remote instance. The remote instance is bare and so install the necessary packages
 
 
-#### 5. Clone the repository:
+#### 5. Clone the repository (In case you have missed this step above):
 ```
 git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
 ```
@@ -189,7 +193,9 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
    ```
 -  Navigate to http://localhost:6789/ in your web browser to access Mage application
 -  File structure should look like this and you should be able to see all the pipelines in your structure:
+  
     <img width="398" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/86e6f23e-b4c0-4276-aabe-f2d7b9afa86e">
+    
 -  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
 -  Triggers:
     - etl_web_to_gcs_weather: Create the trigger for this pipeline. In this project, the pipeline is being triggered at 12:00 AM UTC everyday as it needs to be triggered once a day
@@ -199,11 +205,11 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
     - etl_gcs_to_bigquery_weather: This pipeline will be automatically triggered once the above pipeline completes
     - airline_to_gcs: This pipeline needs to be run manually once, which will trigger the rest of the pipelines
 - This is how the pipelines looks like:
+  
   <img width="1246" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/7485968c-3ae6-4a6c-af12-dc5b4b2c78a6">
 
 
-
-#### 6. DBT:
+#### 7. DBT:
 - In this project, I have used dbt cloud but it can be used locally as well
 - Open a free dbt account [here](https://www.getdbt.com/signup)
 - Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
@@ -237,7 +243,7 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
   - Run the job manually
 
 
-#### 7. Visualization:
+#### 8. Visualization:
 
 
 
