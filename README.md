@@ -182,7 +182,7 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
    - ``` DATASET_NAME=weather_airline_data ```
    - ``` WEATHER_TABLE=forecast_data ```
    - ``` DATA_TABLE_AIRLINE=airline_lookup ```
-   - BigQuery table holds route parquet data ``` DATA_TABLE_ROUTE=routes_lookup ```
+   - ``` DATA_TABLE_ROUTE=routes_lookup ```
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
    ``` docker pull mageai/mageai:latest ```
