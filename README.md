@@ -125,12 +125,13 @@ Two types of dataset is used in this project: Weather forecast data and airline 
   - dewpoint: The temperature to which air must be cooled to become saturated with water vapor (at 2m)
   Other fields and their definition can be seen [here](https://docs.tomorrow.io/reference/data-layers-core)
 
-#### 2. Airline data:
+#### 2. Airline data: 
 - There are three types of airline dataset used in this project which are taken from Kaggle (For the simplicity of this project, I am using static dataset)
-  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the 
+Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmohammad/world-airports-and-airlines-datasets)
+  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the "data" folder of my repo
   - This dataset contains the information about the airlines such as:
-    - 
-  - : 
+    - airline_name: Name of the airline such as United Airlines, 	Air Midwest, etc
+    - iata_code: 
 
 
 ## Summary 
