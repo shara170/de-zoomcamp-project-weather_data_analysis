@@ -196,7 +196,9 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 -  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
 -  Triggers:
     - etl_web_to_gcs_weather: Create the trigger for this pipeline. In this project, the pipeline is being triggered at 12:00 AM UTC everyday as it needs to be triggered once a day
+      
       <img width="599" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/0717bc64-76fb-4dc0-b23d-3d49b7208367">
+      
     - etl_gcs_to_bigquery_weather: This pipeline will be automatically triggered once the above pipeline completes
     - airline_to_gcs: This pipeline needs to be run manually once, which will trigger the rest of the pipelines
 - This is how the pipelines looks like:
