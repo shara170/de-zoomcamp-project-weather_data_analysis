@@ -176,20 +176,13 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
 -  Add the path of your json key file in io_config.yaml
 -  Setup environment vairables in .env files for Mage like below:
    - ``` API_KEY=<your_api_key> ```
-   - #Project ID
-      ``` PROJECT_ID=<your_project_id> ```
-   - # Bucket name holds weather forecast data
-      ``` WEATHER_BUCKET=weather_forecast_data ```
-   - # Bucket name holds airline data files
-      ``` DATA_BUCKET=airline_data ```
-   - # BigQuery Dataset name
-      ``` DATASET_NAME=weather_airline_data ```
-   - # BigQuery table holds weather forecast data
-       ``` WEATHER_TABLE=forecast_data ```
-   - # BigQuery table holds airline data
-        ``` DATA_TABLE_AIRLINE=airline_lookup ```
-   - # BigQuery table holds route parquet data
-        ``` DATA_TABLE_ROUTE=routes_lookup ```
+   - ``` PROJECT_ID=<your_project_id> ```
+   - ``` WEATHER_BUCKET=weather_forecast_data ```
+   - ``` DATA_BUCKET=airline_data ```
+   - ``` DATASET_NAME=weather_airline_data ```
+   - ``` WEATHER_TABLE=forecast_data ```
+   - ``` DATA_TABLE_AIRLINE=airline_lookup ```
+   - BigQuery table holds route parquet data ``` DATA_TABLE_ROUTE=routes_lookup ```
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
    ``` docker pull mageai/mageai:latest ```
