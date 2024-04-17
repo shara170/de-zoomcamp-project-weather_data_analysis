@@ -136,39 +136,60 @@ Dynamic pipelines:
 
 #### 3. Setup Terraform and Fire up Terraform:
 - Setup Terraform (Follow [Terraform download](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=16))
-- Ensure that terraform has already been installed locally. Also ensure that compute instance API and BigQuery API has been enabled
-- Now that the environment setup is completed, its time to create google resource such as GCS bucket for data storage and BigQuery datasets for data warehousing
-- Navigate into the directory "terraform" directory:
+- Navigate into the "terraform" directory by executing below command:
   ```
   cd terraform/
   ```
-- Edit the variables.tf file to match your resources such as Project ID (put the project ID in the default sub-section of project section), Region, bq_dataset_name (BigQuery dataset name), gcs_bucket_name (GCS bucket name for storing API call data), gcs_bucket_data (GCS bucket name to store the data produced by the pipelines)
-- Run the following:
+- Edit the variables.tf file to match your resources such as:
+  - Project ID (Place the project ID in the default sub-section of project section)
+  - Region
+  - bq_dataset_name (BigQuery dataset name)
+  - gcs_bucket_name (GCS bucket name for storing forecast data produced by the pipeline)
+  - gcs_bucket_data (GCS bucket name for storing airline data produced by the pipelines)
+    
+- Finally, execute the following:
   - ``` terraform init ``` This command is used to initialize terraform and get all the cloud providers
   - ``` terraform plan ``` This command will show the resources that will be created
   - ``` terraform apply ``` This command will create the resources which are defined in the main.tf file (In this case -- resources will be created)
   
 
 #### 4. Connect to VM: (Optional if are using compute engine)
-- Set up Virtual Machine on GCP (To see instructions on how to create VM instance, follow this [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14)
+- Set up Virtual Machine on GCP (Follow [VM instance + SSH key](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=14 to see instructions)
 - Create a config file to update and manage the External IPs of the VM instance anytime its suspended/restarted [Configure External IP](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=17)
 - Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier. 
-- Open your terminal and ssh into your remote instance. The remote instance is bare and so install the necessary packages and git clone this repository
+- Open your terminal and ssh into your remote instance. The remote instance is bare and so install the necessary packages
+
+
+#### 5. Clone the repository:
 ```
 git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git)
 ```
 
 
-#### 5. Setup Mage:
+#### 6. Setup Mage:
 - Navigate to the mage folder by running below command:
   ```
   cd mage
   ```
--  Rename dev.env to .env
--  Move your json key created in step 1 in the "mage" folder
--  NOTE: Don't forget to include your key which is a .json file in gitignore, by doing this you will be avoiding accidental commit of secrets into github. You can do this by putting *.json in gitignore 
+-  Rename dev.env to .env. Move your json key created in step 1 in the "mage" folder
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
--  Setup environment vairables for Mage (Needs to be added)
+-  Add the path of your json key file in io_config.yaml
+-  Setup environment vairables in .env files for Mage like below:
+   - ``` API_KEY=<your_api_key> ```
+   - #Project ID
+      ``` PROJECT_ID=<your_project_id> ```
+   - # Bucket name holds weather forecast data
+      ``` WEATHER_BUCKET=weather_forecast_data ```
+   - # Bucket name holds airline data files
+      ``` DATA_BUCKET=airline_data ```
+   - # BigQuery Dataset name
+      ``` DATASET_NAME=weather_airline_data ```
+   - # BigQuery table holds weather forecast data
+       ``` WEATHER_TABLE=forecast_data ```
+   - # BigQuery table holds airline data
+        ``` DATA_TABLE_AIRLINE=airline_lookup ```
+   - # BigQuery table holds route parquet data
+        ``` DATA_TABLE_ROUTE=routes_lookup ```
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
    ``` docker pull mageai/mageai:latest ```
@@ -177,10 +198,18 @@ git clone [https://github.com/emilianolel/dez-project-emi.git](https://github.co
    docker-compose up
    ```
 -  Navigate to http://localhost:6789/ in your web browser to access Mage application
--  File structure should look like this and you should be able to see all the pipelines in your structure: (Add the image of the file structure)
--  (Add instructions to make changes to io_config.yml)
+-  File structure should look like this and you should be able to see all the pipelines in your structure:
+    <img width="398" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/86e6f23e-b4c0-4276-aabe-f2d7b9afa86e">
 -  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
--  Create the triggers and execute the pipelines (add instructions)
+-  Triggers:
+    - etl_web_to_gcs_weather: Create the trigger for this pipeline. In this project, the pipeline is being triggered at 12:00 AM UTC everyday as it needs to be triggered once a day
+      <img width="599" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/0717bc64-76fb-4dc0-b23d-3d49b7208367">
+    - etl_gcs_to_bigquery_weather: This pipeline will be automatically triggered once the above pipeline completes
+    - airline_to_gcs: This pipeline needs to be run manually once, which will trigger the rest of the pipelines
+- This is how the pipelines looks like:
+  <img width="1246" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/7485968c-3ae6-4a6c-af12-dc5b4b2c78a6">
+
+
 
 #### 6. DBT:
 - In this project, I have used dbt cloud but it can be used locally as well
