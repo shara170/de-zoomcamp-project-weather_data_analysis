@@ -114,6 +114,23 @@ Dynamic pipelines:
 
 
 ## Data set Description
+Two types of dataset is used in this project: Weather forecast data and airline data
+#### 1. Weather forecast data:
+- The dataset is fetched through an API call from a website called tomorrow.io. To make the API calls later in the Mage pipeline, please create an account and save API key someplace safe
+- This website provides free hourly forecasts for the next 120 hours. In this project, we are only using forecast data for the next 24 hour
+- Few of the weather fields that are provided by this website are as below:
+  - cloudbase: The lowest altitude of the visible portion of a cloud
+  - cloudceiling: The highest altitude of the visible portion of a cloud
+  - cloudcover: The fraction of the sky obscured by clouds when observed from a particular location
+  - dewpoint: The temperature to which air must be cooled to become saturated with water vapor (at 2m)
+  Other fields and their definition can be seen [here](https://docs.tomorrow.io/reference/data-layers-core)
+
+#### 2. Airline data:
+- There are three types of airline dataset used in this project which are taken from Kaggle (For the simplicity of this project, I am using static dataset)
+  - Airlines data: This dataset was present with the name "Final_airlines" in Kaggle and I placed this data in the 
+  - This dataset contains the information about the airlines such as:
+    - 
+  - : 
 
 
 ## Summary 
