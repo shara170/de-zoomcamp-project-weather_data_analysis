@@ -188,8 +188,7 @@ Orlando on 11th April at 6 PM - Max wind speed, max wind gust
   ```
   git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.git
   ```
-- Execute below to navigate to the project folder:
-  ``` cd de-zoomcamp-project-weather_data_analysis ```
+- Navigate to the project folder ``` cd de-zoomcamp-project-weather_data_analysis ```
 - Navigate into the "terraform" directory by executing below command:
   ```
   cd terraform/
