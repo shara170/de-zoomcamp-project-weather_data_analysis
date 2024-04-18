@@ -2,6 +2,25 @@
 
 ## Contents
 - [Problem Statment](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#problem-statement)
+- [Tech Stack](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#tech-stack)
+- [Reproducing the Project](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#reproducing-the-project)
+  - [Setup GCP account](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#1-setup-gcp-account)
+  - [Install Docker](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#2-install-docker)
+  - [Setup Terraform and Fire up Terraform](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#3-setup-terraform-and-fire-up-terraform)
+  - [Connect to VM](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#4-connect-to-vm-optional-if-are-using-compute-engine)
+  - [Clone the repository](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#5-clone-the-repository-in-case-you-have-missed-this-step-above)
+  - [Setup Mage](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#6-setup-mage)
+  - [DBT](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#7-dbt)
+  - [Visualization](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#8-visualization)
+- [Data Architecture](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#data-architecture)
+- [Data Flow Overview](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#data-flow-overview)
+  - [Data Ingestion](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#1-data-ingestion)
+  - [Data Warehouse](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#2-data-warehouse)
+  - [Data Transformations](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#3-data-transformations)
+- [Data set Description](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#data-set-description)
+  - [Weather forecast data](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#1-weather-forecast-data)
+  - [Airline data](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#2-airline-data)
+- [Dashboard](https://github.com/shara170/de-zoomcamp-project-weather_data_analysis?tab=readme-ov-file#dashboard)
 
 ## Problem Statement
 
