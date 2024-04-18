@@ -29,8 +29,7 @@ Furthermore, weather forecasts play a crucial role in anticipating weather-relat
 
 ### Data Flow Overview
 
-There are two types of pipelines in this project: ETL and ELT
-The first set of ETL pipeline extracts the data from the data sources, performs some transformations and places the transformed data into a data lake(GCS bucket). 
+There are two types of pipelines in this project: ETL and ELT. The first set of ETL pipeline extracts the data from the data sources, performs some transformations and places the transformed data into a data lake(GCS bucket). 
 Another set of the ELT pipeline extracts the data from the GCS bucket, loads it into a BigQuery table and then performs transformations on top of it.
 Ultimately the data is visualized using Looker Studio
 
