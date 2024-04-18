@@ -246,7 +246,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
    docker-compose up
    ```
 -  Navigate to http://localhost:6789/ in your web browser to access Mage application
--  Important: Place your json key file created in step 1 in "mage" folder which is now the root folder in your web browser mage application
+-  **Important: Place your json key file created in step 1 in "mage" folder which is now the root folder in your web browser mage application**
 -  File structure should look like this and you should be able to see all the pipelines in your structure:
   
     <img width="398" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/86e6f23e-b4c0-4276-aabe-f2d7b9afa86e">
