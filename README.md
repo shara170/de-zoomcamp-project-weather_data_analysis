@@ -305,3 +305,11 @@ Looker studio has been used in this project to visualize the data and to draw so
  
 
 ## Dashboard
+
+[My Dashboard](https://lookerstudio.google.com/u/0/reporting/451a85de-f43c-434e-a6bb-7b21bcc46431/page/17UwD)
+
+<img width="930" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/4be4961f-ffe1-4b77-b44b-519a51275a3e">
+
+<img width="907" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/a126474f-ff2b-4dbe-aac5-a18c71b419a4">
+
+
