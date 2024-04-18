@@ -235,6 +235,9 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
    - ``` WEATHER_TABLE=forecast_data ```
    - ``` DATA_TABLE_AIRLINE=airline_lookup ```
    - ``` DATA_TABLE_ROUTE=routes_lookup ```
+
+   NOTE: You can get your API_KEY value by simply creating an account [here](https://app.tomorrow.io/home)
+   
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
    ``` docker pull mageai/mageai:latest ```
