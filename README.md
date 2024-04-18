@@ -283,7 +283,7 @@ Dynamic pipelines:
     
   - In the final step, every day data is appended to a table in BigQuery
     
-  - The triggers are configured to activate one hour after the completion of the aforementioned pipeline, ensuring timely consumption of the data deposited in the GCS bucket every day
+  - The triggers are configured to activate once the "etl_web_to_gcs_weather" pipeline is completed
 
 #### 2. Data Warehouse
 - BigQuery is integral to this project, with all data, both one-time loads and ongoing, housed within the "weather_data" dataset
