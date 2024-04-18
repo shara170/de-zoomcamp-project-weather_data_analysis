@@ -79,13 +79,14 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 -  Open VS code by executing ``` code . ```
 -  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
     - ``` API_KEY=<your_api_key> ```
-    - ``` PROJECT_ID=<your_project_id> ```
-    - ``` WEATHER_BUCKET=weather_forecast_data ```
-    - ``` DATA_BUCKET=airline_data ```
-    - ``` DATASET_NAME=weather_airline_data ```
+    - ``` PROJECT_ID=silicon-mile-412319 ```
+    - ``` WEATHER_BUCKET=silicon-mile-412319-weather ```
+    - ``` DATA_BUCKET=silicon-mile-412319-data ```
+    - ``` DATASET_NAME=weather_data ```
     - ``` WEATHER_TABLE=forecast_data ```
     - ``` DATA_TABLE_AIRLINE=airline_lookup ```
     - ``` DATA_TABLE_ROUTE=routes_lookup ```
+
    NOTE: You can get your API_KEY value by simply creating an account [here](https://app.tomorrow.io/home)
 -  Execute ``` cp dev.env .env ```
 -  **Important: Place your json key file created in step 1 in "mage-zoomcamp" folder which is now the root folder in your VS code**
