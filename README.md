@@ -163,11 +163,6 @@ Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmoham
      - country: Country where the airport resides
      - latitude: Latitude of the airport
      - longitude: Longitude of the airport
-      
-
-
-## Summary 
-Orlando on 11th April at 6 PM - Max wind speed, max wind gust
 
 
 ## Reproducing the project
