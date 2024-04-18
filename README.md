@@ -299,7 +299,8 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - Build the models using ``` dbt build ```
 - Once the models are successfully build, dataset in BigQuery will look like this:
 
-  <img width="352" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/bb0a449b-7f7b-4fbc-87c4-20747554b1dc">
+  <img width="366" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/05c4eeca-2532-4fe7-8b40-4ec0960a4d3a">
+
 
 - Create Environment:
   - Navigate to Deploy > Environments > Create Environment
