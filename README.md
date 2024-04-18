@@ -225,7 +225,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
   ```
   cd mage-zoomcamp
   ```
--  Open VS code by executing ``` code. ```
+-  Open VS code by executing ``` code . ```
 -  Rename dev.env to .env by executing ``` cp dev.env .env ```
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Add the path of your json key file in io_config.yaml
