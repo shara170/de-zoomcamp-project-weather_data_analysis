@@ -135,7 +135,7 @@ def transform(data, *args, **kwargs):
         transformed_df = set_datatypes(transformed_df)
         return transformed_df
 
-        
+    data = pd.DataFrame(data)  
     result_df = start_transform(data)
 
     return result_df
