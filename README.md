@@ -125,6 +125,7 @@ Dynamic pipelines:
 
 ## Data set Description
 Two types of dataset is used in this project: Weather forecast data and airline data
+
 #### 1. Weather forecast data:
 - The dataset is fetched through an API call from a website called tomorrow.io. To make the API calls later in the Mage pipeline, please create an account and save API key someplace safe
 - This website provides free hourly forecasts for the next 120 hours. In this project, we are only using forecast data for the next 24 hour
