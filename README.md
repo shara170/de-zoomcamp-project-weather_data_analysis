@@ -96,12 +96,13 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 
 
 #### 6. Setup Mage:
+- Navigate to the project folder ``` cd de-zoomcamp-project-weather_data_analysis ```
 - Navigate to the mage folder by running below command:
   ```
   cd mage-zoomcamp
   ```
--  Open VS code by executing ``` code . ```
--  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
+- Open VS code by executing ``` code . ```
+- Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
     - ``` API_KEY=<your_api_key> ```
     - ``` PROJECT_ID=silicon-mile-412319 ```
     - ``` WEATHER_BUCKET=silicon-mile-412319-weather ```
