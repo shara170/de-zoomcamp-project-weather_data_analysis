@@ -25,6 +25,7 @@ Furthermore, weather forecasts play a crucial role in anticipating weather-relat
 
 ## Data Architecture
 
+<img width="864" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/5eb14ee3-ce95-47ee-bc3e-01035d5799e3">
 
 
 ### Data Flow Overview
