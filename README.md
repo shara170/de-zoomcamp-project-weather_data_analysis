@@ -141,7 +141,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 - In this project, I have used dbt cloud but it can be used locally as well
 - Open a free dbt account [here](https://www.getdbt.com/signup)
 - Follow the instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/04-analytics-engineering/dbt_cloud_setup.md) to undertsand how to setup BigQuery with dbt cloud
-- Place the airports_lookup.csv file which is present in "data" folder of this repo into the seed of dbt and execute ``` dbt seed ```
+- Create a new file in seeds folder and place the contents of the "airports_lookup.csv" file present in the "dbt" folder of this repo and execute ``` dbt build ``` for that seed
 - Replicate the file structue as in the folder "dbt" of this project. This is how it will look like:
 
   <img width="413" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/ca0211f9-ad97-4c83-a12e-39a18d5f4977">
@@ -165,12 +165,12 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
   - Navigate to the env "Prod" > Create Job > Deploy Job
   - Job Name: Nightly
   - Environment: Production
-  - Execution Settings > Commands: dbt run, dbt build
+  - Execution Settings > Commands: dbt build
   - Runs on Schedule:
     - Timing: Specific hours
     - Runs at(UTC): 9
     - Days of the week: Select all days
-  - Run the job manually
+  - Run the job manually.
   Once the job is completed, this is how the dataset in BigQuery looks like:
 
   <img width="373" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/c69c9759-b8ab-4173-a0a3-f14c174cefd8">
