@@ -238,7 +238,7 @@ Static pipelines:
     
   - In the final stage, the processed data is encapsulated within a Parquet file to compress it effectively. Subsequently, this compressed data is exported to a GCS bucket for storage.
     
-  - Since this is a one-time load, there are no triggers set for this pipeline. It needs to be manually executed
+  - Since this is a one-time load, there are no triggers set for this pipeline. It needs to be manually executed once
  
 - **airline_gcs_to_bigquery**:
   - In this pipeline, Parquet airline data is extracted from the bucket where it was deposited by the "airline_to_gcs" pipeline
@@ -247,7 +247,7 @@ Static pipelines:
     
   - In the last step, the data is exported to the "airline_lookup" table within the "weather_data" dataset in BigQuery
     
-  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "airline_to_gcs" pipeline is finalized
+  - Since this is a one-time load, no triggers are set for this pipeline. It will be automatically executed once the data consumption from the "airline_to_gcs" pipeline is finalized
  
 - **routes_to_gcs**:
   - Data is initially sourced from Kaggle, providing comprehensive details about airline routes such as origin, destination, airline code, etc. Subsequently, the data is uploaded to a GitHub repository, and a link is utilized to ingest the data into the pipeline for subsequent processing
@@ -256,7 +256,7 @@ Static pipelines:
     
   - In the final stage, the processed data is encapsulated within a Parquet file to compress it effectively. Subsequently, this compressed data is exported to a GCS bucket for storage
     
-  - Since this is a one-time load, there are no triggers set for this pipeline. It needs to be manually executed
+  - Since this is a one-time load, there are no triggers set for this pipeline. It will be automatically executed once "airline_gcs_to_bigquery" is completed
 
 - **routes_gcs_to_bigquery**:
   - In this pipeline, Parquet airline route data is extracted from the bucket where it was deposited by the "routes_to_gcs" pipeline
@@ -265,7 +265,7 @@ Static pipelines:
     
   - In the last step, the data is exported to the "routes_lookup" table within the "weather_data" dataset in BigQuery
     
-  - Since this is a one-time load, no triggers are set for this pipeline. It needs to be manually executed once the data consumption from the "routes_to_gcs" pipeline is finalized.
+  - Since this is a one-time load, no triggers are set for this pipeline. It will be automatically executedonce the data consumption from the "routes_to_gcs" pipeline is finalized.
 
 Dynamic pipelines:
 - **etl_web_to_gcs_weather**: 
