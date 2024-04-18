@@ -317,6 +317,9 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
     - Runs at(UTC): 9
     - Days of the week: Select all days
   - Run the job manually
+  Once the job is completed, this is how the dataset in BigQuery looks like:
+
+  <img width="373" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/c69c9759-b8ab-4173-a0a3-f14c174cefd8">
 
 
 #### 8. Visualization: 
