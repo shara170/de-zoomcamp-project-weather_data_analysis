@@ -222,7 +222,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
   ```
   cd mage-zoomcamp
   ```
--  Rename dev.env to .env. Place your json key file created in step 1 in "mage-zoomcamp" folder
+-  Rename dev.env to .env by executing ``` cp dev.env .env ``` . Place your json key file created in step 1 in "mage-zoomcamp" folder
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Add the path of your json key file in io_config.yaml
 -  Setup environment vairables in .env files for Mage like below:
