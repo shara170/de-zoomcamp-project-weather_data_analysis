@@ -221,13 +221,6 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 
 
 #### 6. Setup Mage:
-- Navigate to the mage folder by running below command:
-  ```
-  cd mage-zoomcamp
-  ```
--  Open VS code by executing ``` code . ```
--  Rename dev.env to .env by executing ``` cp dev.env .env ```
--  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
    - ``` API_KEY=<your_api_key> ```
    - ``` PROJECT_ID=<your_project_id> ```
@@ -237,9 +230,14 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
    - ``` WEATHER_TABLE=forecast_data ```
    - ``` DATA_TABLE_AIRLINE=airline_lookup ```
    - ``` DATA_TABLE_ROUTE=routes_lookup ```
-
    NOTE: You can get your API_KEY value by simply creating an account [here](https://app.tomorrow.io/home)
-   
+- Navigate to the mage folder by running below command:
+  ```
+  cd mage-zoomcamp
+  ```
+-  Open VS code by executing ``` code . ```
+-  Rename dev.env to .env by executing ``` cp dev.env .env ```
+-  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
    ``` docker pull mageai/mageai:latest ```
