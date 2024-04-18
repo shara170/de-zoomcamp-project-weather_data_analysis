@@ -333,6 +333,8 @@ Dataset in Kaggle can be found [here](https://www.kaggle.com/datasets/arbazmoham
 
 <img width="930" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/4be4961f-ffe1-4b77-b44b-519a51275a3e">
 
+
+
 <img width="907" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/a126474f-ff2b-4dbe-aac5-a18c71b419a4">
 
 
