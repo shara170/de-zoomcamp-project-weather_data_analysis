@@ -252,18 +252,35 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
     <img width="398" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/86e6f23e-b4c0-4276-aabe-f2d7b9afa86e">
     
 -  Watch this video if needed to undertsand how the data is extracted from and API call and placed into GCS bucket [ETL:API to GCS Mage](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
--  Triggers:
-    - etl_web_to_gcs_weather: Create the trigger for this pipeline. In this project, the pipeline is being triggered at 12:00 AM UTC everyday as it needs to be triggered once a day
+  
+-  **Triggers**:
+    - etl_web_to_gcs_weather: In this project, this pipeline is being run at a certain interval of time which is daily at 12:00 AM UTC.
+      Run the pipeline once
       
       <img width="599" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/0717bc64-76fb-4dc0-b23d-3d49b7208367">
+
+      Once the pipeline is completed, you will see a parquet data file created as such:
       
-    - etl_gcs_to_bigquery_weather: This pipeline will be automatically triggered once the above pipeline completes
-    - airline_to_gcs: This pipeline needs to be run manually once, which will trigger the rest of the pipelines
-- This is how the pipelines looks like:
+      <img width="795" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/39de906d-5637-4cfd-ad8c-e14b60f7584d">
+      
+    - etl_gcs_to_bigquery_weather: This pipeline will be automatically triggered once the above pipeline completes. Once this pipeline is completed, you will see the data in BigQuery with the schema such as- silicon-mile-412319.weather_data.forecast_data
+       
+    - airline_to_gcs: This pipeline needs to be run once manually as this pipeline will pull static data. Trigger the pipeline once
+      This is how the pipelines looks like:
   
-  <img width="1246" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/7485968c-3ae6-4a6c-af12-dc5b4b2c78a6">
+      <img width="1246" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/7485968c-3ae6-4a6c-af12-dc5b4b2c78a6">
+      It will trigger a set of pipelines. 
+      Once the pipeline execution is completed, you should be able to see below mentioned parquet data files in the bucket "silicon-mile-412319-data":
+       - airline_lookup.parquet
+       - routes_lookup.parquet
 
+      <img width="546" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/04ed1d53-7be2-489d-810d-1128d65f9df6">
 
+      Also, you should be able to see the tables "weather_data.airline_lookup" and "weather_data.routes_lookup" in BigQuery
+      
+      <img width="252" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/5ed38a1c-b3f8-4121-a6dd-a88df160a770">
+
+   
 #### 7. DBT:
 - In this project, I have used dbt cloud but it can be used locally as well
 - Open a free dbt account [here](https://www.getdbt.com/signup)
