@@ -228,8 +228,7 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 -  Open VS code by executing ``` code . ```
 -  Rename dev.env to .env by executing ``` cp dev.env .env ```
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
--  Add the path of your json key file in io_config.yaml
--  Setup environment vairables in .env files for Mage like below:
+-  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
    - ``` API_KEY=<your_api_key> ```
    - ``` PROJECT_ID=<your_project_id> ```
    - ``` WEATHER_BUCKET=weather_forecast_data ```
