@@ -6,9 +6,9 @@ In this project, we leverage weather forecast data to anticipate weather conditi
 
 By closely monitoring weather patterns such as visibility, wind speed, and precipitation, airport authorities can effectively manage ground operations. Informed decisions regarding runway usage, aircraft de-icing procedures, and ground handling operations can be made, ensuring smoother and safer journeys for passengers.
 
-Additionally, by analyzing weather forecasts and real-time data, airports can proactively avoid turbulence, storms, and other adverse conditions, thereby enhancing the overall safety and efficiency of flight operations.
+Additionally, by analyzing weather forecasts and real-time data, airport authorities can proactively avoid turbulence, storms, and other adverse conditions, thereby enhancing the overall safety and efficiency of flight operations.
 
-Furthermore, weather forecasts play a crucial role in anticipating weather-related disruptions to airport operations, such as snowstorms or fog. This enables airports to implement contingency plans and minimize delays, ensuring continued operational resilience.
+Furthermore, weather forecasts play a crucial role in anticipating weather-related disruptions to airport operations, such as snowstorms or fog. This enables airport authorities to implement contingency plans and minimize delays, ensuring continued operational resilience.
  
 
 ## Tech Stack
