@@ -49,7 +49,7 @@ Other datasets used in this project are derived from [Kaggle](https://www.kaggle
 ## Reproducing the project
 
 #### 1. Setup GCP account:
-- Setup up a GCP account and create a new project id
+- Setup up a GCP account and create a new project id. Follow instructions [here](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/01-docker-terraform/1_terraform_gcp/2_gcp_overview.md#initial-setup)
 - Setup a service account. Select roles for this account (Bigquery Admin, Compute Admin and storage Admin Roles)
 - Create a key and download this file in your computer, it will be a json file. This key will be used to authenticate google services and resources
 
