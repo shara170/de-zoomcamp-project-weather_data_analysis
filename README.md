@@ -221,22 +221,24 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
 
 
 #### 6. Setup Mage:
--  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
-   - ``` API_KEY=<your_api_key> ```
-   - ``` PROJECT_ID=<your_project_id> ```
-   - ``` WEATHER_BUCKET=weather_forecast_data ```
-   - ``` DATA_BUCKET=airline_data ```
-   - ``` DATASET_NAME=weather_airline_data ```
-   - ``` WEATHER_TABLE=forecast_data ```
-   - ``` DATA_TABLE_AIRLINE=airline_lookup ```
-   - ``` DATA_TABLE_ROUTE=routes_lookup ```
-   NOTE: You can get your API_KEY value by simply creating an account [here](https://app.tomorrow.io/home)
 - Navigate to the mage folder by running below command:
   ```
   cd mage-zoomcamp
   ```
 -  Open VS code by executing ``` code . ```
--  Rename dev.env to .env by executing ``` cp dev.env .env ```
+-  Setup environment vairables in dev.env files for Mage like below. Change the values as to your liking but make sure that the resources match with terraform variables.tf:
+    - ``` API_KEY=<your_api_key> ```
+    - ``` PROJECT_ID=<your_project_id> ```
+    - ``` WEATHER_BUCKET=weather_forecast_data ```
+    - ``` DATA_BUCKET=airline_data ```
+    - ``` DATASET_NAME=weather_airline_data ```
+    - ``` WEATHER_TABLE=forecast_data ```
+    - ``` DATA_TABLE_AIRLINE=airline_lookup ```
+    - ``` DATA_TABLE_ROUTE=routes_lookup ```
+   NOTE: You can get your API_KEY value by simply creating an account [here](https://app.tomorrow.io/home)
+-  Execute ``` cp dev.env .env ```
+-  **Important: Place your json key file created in step 1 in "mage-zoomcamp" folder which is now the root folder in your VS code**
+-  Change the filepath in io_config.yml accordingly. For example: GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/mage_zoomcamp.json"
 -  Ensure that docker is installed properly. Can check by running ``` docker --version ``` in the terminal
 -  Run ``` docker compose build ``` to build an image by taking instructions from Docker file as well as Docker-compose file
 -  To pull the latest image from the Mage repo, execute below:
@@ -246,8 +248,6 @@ git clone https://github.com/shara170/de-zoomcamp-project-weather_data_analysis.
    docker-compose up
    ```
 -  Navigate to http://localhost:6789/ in your web browser to access Mage application
--  **Important: Place your json key file created in step 1 in "mage" folder which is now the root folder in your web browser mage application**
--  Change the filepath in io_config.yml accordingly. For example: GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/mage_zoomcamp.json"
 -  File structure should look like this and you should be able to see all the pipelines in your structure:
   
     <img width="398" alt="image" src="https://github.com/shara170/de-zoomcamp-project-weather_data_analysis/assets/128853856/86e6f23e-b4c0-4276-aabe-f2d7b9afa86e">
